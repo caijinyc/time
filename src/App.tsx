@@ -78,7 +78,12 @@ function App() {
         <span className={styles.second}>{d.format("ss")}</span>
       </div>
 
-      <div className={styles.timeCounter}>
+      <div
+        className={styles.timeCounter}
+        onClick={() => {
+          counterToggle();
+        }}
+      >
         <span className={styles.hour}>
           {padLeft(dayjs.duration(counterRef.current).hours())}
         </span>
